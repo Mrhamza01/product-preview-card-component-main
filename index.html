@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="input.css" />
+    <title>Frontend Mentor | Product preview card component</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          colors: {
+            // ### Primary
+
+            "Dark-cyan": "hsl(158, 36%, 37%)",
+            Cream: "hsl(30, 38%, 92%)",
+            // ### Neutral
+            "Very-dark-blue": "hsl(212, 21%, 14%)",
+            "Dark-grayish-blue": "hsl(228, 12%, 48%)",
+            "White-custom": "hsl(0, 0%, 100%)",
+          },
+
+          extend: {
+            fontFamily: {
+              montserrat: ["Montserrat"],
+              fraunces: ["Fraunces"],
+            },
+          },
+        },
+        plugins: [],
+      };
+    </script>
+  </head>
+  <body>
+    <div class="flex justify-center items-center h-screen">
+      <!-- main -->
+
+      <div class="">
+        <!-- left div -->
+        <div class="w-[250px] h-[370px]">
+          <img
+            src="./images/image-product-desktop.jpg"
+            alt="product"
+            class="w-[250px] h-[370px] rounded-l-lg sm:w-[250px] h-[300px]"
+          />
+        </div>
+      </div>
+      <!-- right div -->
+
+      <div class="flex flex-col w-[250px] h-[370px]">
+        <span
+          class="ml-6 mt-5 font-montserrat text-xs text-Dark-grayish-blue tracking-[0.5em]"
+          >PERFUME</span
+        >
+        <h1 class="ml-6 mt-4 font-fraunces font-bold antialiased text-2xl">
+          Gabrielle <br />
+          Essence Eau <br />
+          De Parfum
+        </h1>
+        <span
+          class="mt-4 ml-6 text-Dark-grayish-blue text-xs tracking-[0.1em] leading-4"
+        >
+          A floral, solar and voluptuous interpretation composed by Olivier
+          Polge, Perfumer-Creator for the House of CHANEL.</span
+        >
+        <div class="flex mt-6 ml-6">
+          <span
+            class="font-fraunces font-bold antialiased text-3xl text-Dark-cyan"
+            >$149.99</span
+          >
+          <p
+            class="ml-4 mt-2 font-montserrat text-xs text-Dark-grayish-blue line-through"
+          >
+            $169.99
+          </p>
+        </div>
+        <div class="flex bg-Dark-cyan rounded-lg w-52 h-10 mx-auto mt-6">
+          <div class="flex my-auto">
+            <img
+              src="./images/icon-cart.svg"
+              alt="card"
+              class="h-4 w-4 mr-2 ml-12 my-auto"
+            />
+            <p class="font-bold text-sm text-White-custom">Add to Cart</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
